@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.edelhome.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_registieren"
+        android:name="com.example.edelhome.ui.Registrieren.RegistrierenFragment"
+        android:label="@string/menu_registrieren"
+        tools:layout="@layout/fragment_registrieren">
+        <action android:id="@+id/action_nav_gallery_to_nav_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_geraeteliste"
+        android:name="com.example.edelhome.ui.geraeteliste.GeraetelisteFragment"
+        android:label="@string/menu_geraeteliste"
+        tools:layout="@layout/fragment_geraeteliste" />
+
+    <fragment
+        android:id="@+id/nav_abmelden"
+        android:name="com.example.edelhome.ui.tools.ToolsFragment"
+        android:label="@string/menu_tools"
+        tools:layout="@layout/fragment_tools" />
+
+    <fragment
+        android:id="@+id/nav_share"
+        android:name="com.example.edelhome.ui.share.ShareFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_share" />
+
+    <fragment
+        android:id="@+id/nav_send"
+        android:name="com.example.edelhome.ui.send.SendFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_send" />
+    <action android:id="@+id/action_global_nav_send" app:destination="@id/nav_send" />
+    <fragment
+        android:id="@+id/nav_anmelden"
+        android:name="com.example.edelhome.ui.anmelden.AnmeldenFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_anmelden" />
+
+
+</navigation>

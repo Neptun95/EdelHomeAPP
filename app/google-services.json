@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "495867346356",
+    "firebase_url": "https://edelhome-790d9.firebaseio.com",
+    "project_id": "edelhome-790d9",
+    "storage_bucket": "edelhome-790d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495867346356:android:ced7ccd381940e73ff46e1",
+        "android_client_info": {
+          "package_name": "com.example.edelhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495867346356-f0u3r9bc3qn0hgrqpvimqdnljgv3kldi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL2f3pv2tvyOTj_A20uDBGrc6JNExi48g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495867346356-f0u3r9bc3qn0hgrqpvimqdnljgv3kldi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

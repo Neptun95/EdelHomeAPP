@@ -1,0 +1,234 @@
+@startuml
+
+title __APP's Class Diagram__\n
+
+  namespace com.example.edelhome {
+    class com.example.edelhome.BuildConfig {
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    class com.example.edelhome.ExampleDialog {
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    class com.example.edelhome.MainActivity {
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    class com.example.edelhome.SecondActivity {
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace data {
+      class com.example.edelhome.data.Benutzer {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace data {
+      class com.example.edelhome.data.GeraeteManager {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.Registrieren {
+      class com.example.edelhome.ui.Registrieren.RegistrierenFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.Registrieren {
+      class com.example.edelhome.ui.Registrieren.RegistrierenViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.anmelden {
+      class com.example.edelhome.ui.anmelden.AnmeldenFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.anmelden {
+      class com.example.edelhome.ui.anmelden.AnmeldenViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.geraet {
+      class com.example.edelhome.ui.geraet.GeraetFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.geraet {
+      class com.example.edelhome.ui.geraet.GeraetViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.geraet {
+      namespace liste {
+        class com.example.edelhome.ui.geraeteliste.G_ListFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.geraet {
+      namespace liste {
+        class com.example.edelhome.ui.geraeteliste.GeraetelisteFragment {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.geraet {
+      namespace liste {
+        class com.example.edelhome.ui.geraeteliste.GeraetelisteViewModel {
+        }
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.home {
+      class com.example.edelhome.ui.home.HomeFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.home {
+      class com.example.edelhome.ui.home.HomeViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.send {
+      class com.example.edelhome.ui.send.SendFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.send {
+      class com.example.edelhome.ui.send.SendViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.share {
+      class com.example.edelhome.ui.share.ShareFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.share {
+      class com.example.edelhome.ui.share.ShareViewModel {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.tools {
+      class com.example.edelhome.ui.tools.ToolsFragment {
+      }
+    }
+  }
+  
+
+  namespace com.example.edelhome {
+    namespace ui.tools {
+      class com.example.edelhome.ui.tools.ToolsViewModel {
+      }
+    }
+  }
+  
+
+  com.example.edelhome.ExampleDialog -up-|> androidx.appcompat.app.AppCompatDialogFragment
+  com.example.edelhome.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.edelhome.SecondActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.edelhome.data.GeraeteManager .up.|> java.io.Serializable
+  com.example.edelhome.ui.Registrieren.RegistrierenFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.Registrieren.RegistrierenFragment o-- com.example.edelhome.ui.anmelden.AnmeldenFragment : anmeldenFragment
+  com.example.edelhome.ui.Registrieren.RegistrierenFragment o-- com.example.edelhome.ui.anmelden.AnmeldenViewModel : anmeldenViewModel
+  com.example.edelhome.ui.Registrieren.RegistrierenFragment o-- com.example.edelhome.ui.Registrieren.RegistrierenFragment : registrierenFragment
+  com.example.edelhome.ui.Registrieren.RegistrierenFragment o-- com.example.edelhome.ui.Registrieren.RegistrierenViewModel : registrierenViewModel
+  com.example.edelhome.ui.Registrieren.RegistrierenViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.anmelden.AnmeldenFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.anmelden.AnmeldenFragment o-- com.example.edelhome.ui.anmelden.AnmeldenViewModel : anmeldenViewModel
+  com.example.edelhome.ui.anmelden.AnmeldenFragment o-- com.example.edelhome.ui.home.HomeFragment : homeFragment
+  com.example.edelhome.ui.anmelden.AnmeldenViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.geraet.GeraetFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.geraet.GeraetFragment o-- com.example.edelhome.ui.geraet.GeraetFragment : geraetFragment
+  com.example.edelhome.ui.geraet.GeraetFragment o-- com.example.edelhome.ui.geraet.GeraetViewModel : geraetViewModel
+  com.example.edelhome.ui.geraet.GeraetViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.geraeteliste.G_ListFragment -up-|> androidx.fragment.app.ListFragment
+  com.example.edelhome.ui.geraeteliste.GeraetelisteFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.geraeteliste.GeraetelisteFragment o-- com.example.edelhome.ui.geraet.GeraetFragment : geraetFragment
+  com.example.edelhome.ui.geraeteliste.GeraetelisteFragment o-- com.example.edelhome.ui.geraeteliste.GeraetelisteFragment : geraetelisteFragment
+  com.example.edelhome.ui.geraeteliste.GeraetelisteFragment o-- com.example.edelhome.ui.geraeteliste.GeraetelisteViewModel : geraetelisteViewModel
+  com.example.edelhome.ui.geraeteliste.GeraetelisteViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.home.HomeFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.home.HomeFragment o-- com.example.edelhome.ui.home.HomeViewModel : homeViewModel
+  com.example.edelhome.ui.home.HomeViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.send.SendFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.send.SendFragment o-- com.example.edelhome.ui.send.SendViewModel : sendViewModel
+  com.example.edelhome.ui.send.SendViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.share.ShareFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.share.ShareFragment o-- com.example.edelhome.ui.share.ShareViewModel : shareViewModel
+  com.example.edelhome.ui.share.ShareViewModel -up-|> androidx.lifecycle.ViewModel
+  com.example.edelhome.ui.tools.ToolsFragment -up-|> androidx.fragment.app.Fragment
+  com.example.edelhome.ui.tools.ToolsFragment o-- com.example.edelhome.MainActivity : main
+  com.example.edelhome.ui.tools.ToolsFragment o-- com.example.edelhome.ui.home.HomeFragment : mainFragment
+  com.example.edelhome.ui.tools.ToolsFragment o-- com.example.edelhome.ui.tools.ToolsViewModel : toolsViewModel
+  com.example.edelhome.ui.tools.ToolsViewModel -up-|> androidx.lifecycle.ViewModel
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
